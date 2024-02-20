@@ -1,0 +1,15 @@
+{% extends "notes/note_base.html" %}
+{% load custom_filter %}
+
+{% block notes_content %}
+    <p class='thick_text'>Notes matching {{search_term}}</p>
+    <ul>
+        {% for note in lst %}
+        <li>
+            {{ note.text }}
+            <br>
+            Filed under section {{ note.section|linkable_section }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

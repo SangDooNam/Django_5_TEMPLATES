@@ -1,0 +1,9 @@
+{% extends "notes/note_base.html" %}
+
+{% block notes_content %}
+    <h4>Welcome to my course notes!</h4>
+    <ul>
+        <li><a href='{{ sections_link }}'>Check the list of sections</a></li>
+        <li><a href="{{ details_link }}">Read my first note</a></li>
+    </ul>
+{% endblock%}

@@ -20,6 +20,7 @@ from notes.views import redirect_to_note_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include("main.urls", namespace="main")),
     path('<int:note_id>/', redirect_to_note_detail),
     path('notes/', include("notes.urls", namespace="notes")),
     path('todo/', include("todo.urls", namespace="todo")),

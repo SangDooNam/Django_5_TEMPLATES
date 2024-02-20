@@ -1,0 +1,13 @@
+{% extends "notes/note_base.html" %}
+{% load custom_filter %}
+
+
+{% block notes_content %}
+    <h1>Notes about {{section_name}}</h1>
+    <ol>
+        {% for text in lst %}
+            <li>{{ text|escape_angle_brackets}}</li>
+        {% endfor %}
+    </ol>
+    <a href= '{{ sections }}'>Back to sections</a>
+{% endblock %}

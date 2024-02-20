@@ -1,0 +1,12 @@
+{% extends "notes/note_base.html" %}
+{% load custom_filter %}
+
+
+{% block notes_content %}
+    <h4>Browse my notes by section</h4>
+    <ol>
+        <li><a href='{{ web_frameworks }}'>Web Frameworks</a></li>
+        <li><a href='{{ setting_up_django }}'>Setting up Django</a></li>
+        <li><a href='{{ url_mapping }}'>URL Mapping</a></li>
+    </ol>
+{% endblock %}

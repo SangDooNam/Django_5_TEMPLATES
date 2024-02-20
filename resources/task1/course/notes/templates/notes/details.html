@@ -1,0 +1,15 @@
+{% extends "notes/note_base.html" %}
+{% load custom_filter %}
+
+
+{% block notes_content %}
+
+    <p class=thick_text>Note number {{num}}</p>
+
+    <p><span class="thick_text">Section:</span> {{section|linkable_section }}</p>
+
+    <p>{{text}}</p>
+    
+    <a href='{{ previous }}'>Previous</a> <a href='{{ next }}'>Next</a>
+
+{%endblock%}
